@@ -1,0 +1,62 @@
+:root{
+  --bg:#ffffff;
+  --text:#222;
+  --primary:#e76f51;
+  --muted:#666;
+  --card:#fff9f6;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
+}
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.logo{margin:0;font-size:1.25rem;color:var(--primary)}
+.nav a{margin-left:14px;text-decoration:none;color:var(--text)}
+.nav .btn{background:var(--primary);color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none}
+.theme-toggle{margin-left:8px;padding:6px;border-radius:6px;border:1px solid #ddd;background:#fff;cursor:pointer}
+
+/* Hero */
+.hero{background:linear-gradient(90deg, #fff4ee, #fff);padding:36px 0;border-bottom:1px solid #eee}
+.hero h2{margin:0 0 8px;font-size:2rem}
+.btn{display:inline-block;background:var(--primary);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none}
+
+/* Sections */
+.section{padding:28px 0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.card{background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+.card img{width:100%;height:160px;object-fit:cover;display:block}
+.card-body{padding:12px}
+.card h4{margin:0 0 6px}
+.meta{color:var(--muted);font-size:0.9rem;margin-bottom:8px}
+.card ul{margin:6px 0 10px;padding-left:18px}
+.card ol{margin:6px 0;padding-left:18px}
+
+/* Gallery */
+.gallery{display:flex;gap:12px;flex-wrap:wrap}
+.gallery img{width:calc(33.333% - 8px);border-radius:6px;object-fit:cover;height:140px}
+
+/* Subscribe form */
+.subscribe-form{display:flex;gap:12px;flex-wrap:wrap;align-items:end}
+.subscribe-form label{flex:1;display:flex;flex-direction:column;font-size:0.95rem}
+.subscribe-form input{padding:8px;border:1px solid #ccc;border-radius:6px}
+.form-message{width:100%;color:green;margin-top:6px}
+
+/* Footer */
+.site-footer{border-top:1px solid #eee;padding:14px 0;text-align:center;color:var(--muted);font-size:0.95rem}
+
+/* Dark theme */
+body.dark{
+  --bg:#0e0e10; --text:#f3f4f6; --primary:#ff9f68; --muted:#a9afb6; --card:#121214;
+}
+body.dark .theme-toggle{background:#1a1a1c;border-color:#222;color:#fff}
+
+/* Responsive tweaks */
+@media (max-width:640px){
+  .hero h2{font-size:1.4rem}
+  .gallery img{width:100%;height:160px}
+}
